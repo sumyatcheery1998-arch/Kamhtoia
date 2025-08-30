@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="my">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Love Message</title>
+    <title>Love Site</title>
     <style>
-        body { text-align: center; background: #ffe6f2; margin-top: 50px; }
-        .heart { font-size: 80px; color: red; animation: beat 1s infinite; }
-        @keyframes beat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.3); }
-            100% { transform: scale(1); }
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: red;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
         }
-        .message { font-size: 30px; color: #ff1493; margin-top: 20px; font-family: Arial; }
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: red;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+        @keyframes beat {
+            0% { transform: scale(1) rotate(-45deg); }
+            50% { transform: scale(1.2) rotate(-45deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
     </style>
 </head>
 <body>
-    <div class="heart">❤️</div>
-    <div class="message" id="text">I Love You</div>
-
-    <script>
-        let messages = ["I Love You", "Say Yes!"];
-        let index = 0;
-        setInterval(() => {
-            document.getElementById("text").innerText = messages[index];
-            index = (index + 1) % messages.length;
-        }, 2000); // 2 စက္ကန့်တိုင်း ပြောင်းမယ်
-    </script>
+    <div class="heart"></div>
+    <p>I Love You</p>
 </body>
 </html>
