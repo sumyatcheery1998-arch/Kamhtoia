@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Love Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>နှလုံးသားနှင့်စာသား</title>
     <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         .heart {
-            position: absolute;
+            position: relative;
             width: 100px;
             height: 90px;
-            background: red;
+            background-color: red;
             transform: rotate(-45deg);
-            animation: beat 1s infinite;
+            margin-right: 50px;
         }
         .heart:before,
         .heart:after {
@@ -17,7 +27,7 @@
             position: absolute;
             width: 100px;
             height: 90px;
-            background: red;
+            background-color: red;
             border-radius: 50%;
         }
         .heart:before {
@@ -28,15 +38,21 @@
             left: 50px;
             top: 0;
         }
-        @keyframes beat {
-            0% { transform: scale(1) rotate(-45deg); }
-            50% { transform: scale(1.2) rotate(-45deg); }
-            100% { transform: scale(1) rotate(-45deg); }
+        .text {
+            color: red;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-style: italic;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
     <div class="heart"></div>
-    <p>I Love You</p>
+    <div class="text">I LOVE YOU</div>
 </body>
 </html>
