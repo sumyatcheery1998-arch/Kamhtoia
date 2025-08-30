@@ -20,6 +20,7 @@
             background-color: red;
             transform: rotate(-45deg);
             margin-right: 50px;
+            animation: fade 2s infinite;
         }
         .heart:before,
         .heart:after {
@@ -29,6 +30,7 @@
             height: 90px;
             background-color: red;
             border-radius: 50%;
+            animation: fade 2s infinite;
         }
         .heart:before {
             top: -50px;
@@ -48,6 +50,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+        @keyframes fade {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
