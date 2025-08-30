@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
         body {
             background-color: black;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -19,8 +20,6 @@
             height: 90px;
             background-color: red;
             transform: rotate(-45deg);
-            margin-right: 50px;
-            animation: fade 2s infinite;
         }
         .heart:before,
         .heart:after {
@@ -30,7 +29,6 @@
             height: 90px;
             background-color: red;
             border-radius: 50%;
-            animation: fade 2s infinite;
         }
         .heart:before {
             top: -50px;
@@ -46,15 +44,7 @@
             font-size: 25px;
             font-style: italic;
             font-weight: bold;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        @keyframes fade {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+            margin-top: 20px; /* နှလုံးပုံနှင့် စာသားကြား အကွာအဝေး */
         }
     </style>
 </head>
